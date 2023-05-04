@@ -12,7 +12,7 @@ if lobbyURL == "":
 else:
     driver.get(lobbyURL)
 
-print("---Running---")
+print("[Running]")
 
 # click start button
 if lobbyURL == "":
@@ -49,9 +49,9 @@ while(True):
 time.sleep(.0001)
 typingText = driver.find_element(By.CLASS_NAME, 'inputPanel')
 text = typingText.text
-
+      
 # weird equation used to keep the speed below sus level
-intervalDiff = .01 + (len(text) / 30000) 
+intervalDiff = .0067 + (len(text) / 30000) 
 
 #interval means how fast typing between letters.
 pyautogui.typewrite(text, interval = intervalDiff)
